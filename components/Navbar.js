@@ -1,16 +1,21 @@
-import Link from 'next/link'
+// components/Navbar.js
+import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <nav className="bg-transparent absolute top-0 left-0 w-full z-50 px-6 py-4">
-      <div className="flex justify-between items-center max-w-7xl mx-auto">
-        <h1 className="text-white text-2xl font-bold">SleekSite</h1>
-        <div className="space-x-6">
-          <Link href="/" className="text-white hover:text-purple-300 transition">Home</Link>
-          <Link href="/about" className="text-white hover:text-purple-300 transition">About</Link>
-          <Link href="/contact" className="text-white hover:text-purple-300 transition">Contact</Link>
+    <nav className="bg-blue-600 fixed w-full z-10 top-0 left-0 shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          <div className="flex-shrink-0 text-white font-bold text-xl">
+            <Link href="/">My Website</Link>
+          </div>
+          <div className="hidden md:flex space-x-4">
+            <Link href="/" className="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
+            <Link href="/about" className="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">About</Link>
+            <Link href="/contact" className="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Contact</Link>
+          </div>
         </div>
       </div>
     </nav>
-  )
+  );
 }

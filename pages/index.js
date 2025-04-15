@@ -1,26 +1,103 @@
-import Link from 'next/link'; // Ensure this is imported
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <>
-      <main className="bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] min-h-screen flex items-center justify-center text-white px-6">
-        <div className="text-center max-w-3xl animate-fade-in-up">
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
-            Build Something <span className="text-pink-400">Beautiful</span>
-          </h1>
-          <p className="text-lg md:text-xl text-gray-300 mb-8">
-            Launch your ideas with a sleek modern layout powered by Next.js and Tailwind CSS.
-          </p>
-          <div className="flex justify-center gap-6">
-            <Link href="/about" className="bg-pink-500 hover:bg-pink-600 text-white py-3 px-6 rounded-xl text-lg transition shadow-lg">
-              Learn More
-            </Link>
-            <Link href="/contact" className="border border-pink-400 hover:bg-pink-400 hover:text-white text-pink-300 py-3 px-6 rounded-xl text-lg transition shadow-lg">
-              Contact Us
-            </Link>
+    <div>
+      {/* Hero Section */}
+      <section className="relative bg-cover bg-center h-screen" style={{ backgroundImage: "url('/path/to/your-background-image.jpg')" }}>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="relative z-10 text-center text-white px-4 py-24">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">Welcome to Our Amazing Website</h1>
+          <p className="text-lg mb-6">Your gateway to excellence and innovation</p>
+          <a href="#contact" className="bg-blue-600 text-white py-3 px-6 rounded-lg shadow-lg hover:bg-blue-700 transition">Contact Us</a>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-8">Our Services</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Service 1 */}
+            <div className="bg-gray-100 p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-4">Service 1</h3>
+              <Image
+                src="/path/to/service-image-1.jpg"
+                alt="Service 1"
+                layout="responsive"
+                width={500}
+                height={300}
+                objectFit="cover"
+                quality={80}
+                priority={false}
+              />
+              <p className="text-gray-700 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            {/* Service 2 */}
+            <div className="bg-gray-100 p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-4">Service 2</h3>
+              <Image
+                src="/path/to/service-image-2.jpg"
+                alt="Service 2"
+                layout="responsive"
+                width={500}
+                height={300}
+                objectFit="cover"
+                quality={80}
+                priority={false}
+              />
+              <p className="text-gray-700 mt-4">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            {/* Service 3 */}
+            <div className="bg-gray-100 p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-4">Service 3</h3>
+              <Image
+                src="/path/to/service-image-3.jpg"
+                alt="Service 3"
+                layout="responsive"
+                width={500}
+                height={300}
+                objectFit="cover"
+                quality={80}
+                priority={false}
+              />
+              <p className="text-gray-700 mt-4">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+            </div>
           </div>
         </div>
-      </main>
-    </>
-  )
+      </section>
+
+      {/* About Section */}
+      <section className="py-12 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-8">About Us</h2>
+          <div className="text-lg text-gray-700 text-center">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-8">Contact Us</h2>
+          <form className="max-w-xl mx-auto space-y-6">
+            <div className="flex flex-col">
+              <label className="text-lg font-semibold">Name</label>
+              <input type="text" className="p-3 rounded-lg border" placeholder="Enter your name" />
+            </div>
+            <div className="flex flex-col">
+              <label className="text-lg font-semibold">Email</label>
+              <input type="email" className="p-3 rounded-lg border" placeholder="Enter your email" />
+            </div>
+            <div className="flex flex-col">
+              <label className="text-lg font-semibold">Message</label>
+              <textarea className="p-3 rounded-lg border" placeholder="Enter your message" rows="4"></textarea>
+            </div>
+            <button type="submit" className="w-full bg-blue-600 text-white py-3 rounded-lg shadow-lg hover:bg-blue-700 transition">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  );
 }

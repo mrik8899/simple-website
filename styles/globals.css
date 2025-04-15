@@ -1,9 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* styles/globals.css */
+@layer base {
+  /* Button Hover Effect */
+  .btn:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', sans-serif;
+  /* Image Hover Effect */
+  .image-hover:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+}
+/* Enable Smooth Scroll */
+html {
+  scroll-behavior: smooth;
 }
