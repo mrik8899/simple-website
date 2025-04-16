@@ -10,10 +10,21 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.4",
+    "braces": "^3.0.3",
+    "chokidar": "^4.0.3",
+    "fast-glob": "^3.3.3",
+    "file-loader": "^6.2.0",
     "framer-motion": "^12.7.3",
+    "globby": "^14.1.0",
+    "imagemin": "^9.0.1",
+    "micromatch": "^4.0.8",
     "next": "15.3.0",
+    "next-optimized-images": "^2.6.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "readdirp": "^4.1.2",
+    "terser-webpack-plugin": "^5.3.14",
+    "webpack": "^5.99.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

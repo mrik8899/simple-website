@@ -1,12 +1,12 @@
 // pages/_app.js
-import Navbar from '../components/Navbar'; // Import Navbar
-import '../styles/globals.css';
+import Navbar from '../components/Navbar'; // Import Navbar component
+import '../styles/globals.css'; // Import global styles
 
 function MyApp({ Component, pageProps }) {
   return (
     <div>
-      <Navbar />
-      <Component {...pageProps} />
+      <Navbar /> {/* Navbar is included across all pages */}
+      <Component {...pageProps} /> {/* The page content */}
     </div>
   );
 }
